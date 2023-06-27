@@ -41,7 +41,7 @@
         <tbody>
         <tr th:each="post : ${posts}">
             <td th:text="${post.bno}">글번호</td>
-            <td th:text="${post.username}">유저ID</td>
+            <td th:text="${post.member.name}">유저ID</td>
             <td> <a th:href="@{|/post/${post.bno}|}" th:text="${post.title}">제목</a></td>
             <td th:text="${post.date}">날짜</td>
             <td th:text="${post.whetherLogin}">회원여부</td>

@@ -52,7 +52,7 @@
         </thead>
         <tbody>
         <tr th:each="reply : ${replies}">
-            <td th:text="${reply.username}">유저ID</td>
+            <td th:text="${reply.member.name}">유저ID</td>
             <td th:text="${reply.content}">내용</td>
             <td th:text="${reply.date}">날짜</td>
             <td th:text="${reply.whetherLogin}">회원여부</td>

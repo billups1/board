@@ -1,13 +1,5 @@
 package hello.board;
 
-import hello.board.repository.member.Member;
-import hello.board.repository.member.MemberRepository;
-import lombok.RequiredArgsConstructor;
-import org.springframework.context.event.ApplicationContextEvent;
-import org.springframework.context.event.EventListener;
-import org.springframework.stereotype.Component;
-
-import javax.annotation.PostConstruct;
 //
 //@Component
 //@RequiredArgsConstructor

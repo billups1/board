@@ -1,6 +1,6 @@
 package hello.board.repository.reply;
 
-import hello.board.repository.board.Post;
+import hello.board.domain.Reply;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -8,7 +8,6 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Repository
-@Transactional
 @RequiredArgsConstructor
 public class JpaReplyRepository implements ReplyRepository{
 

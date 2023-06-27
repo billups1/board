@@ -1,10 +1,8 @@
 package hello.board.repository.reply;
 
-import hello.board.repository.board.Post;
-import hello.board.repository.board.PostUpdateDto;
+import hello.board.domain.Reply;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface ReplyRepository {
 

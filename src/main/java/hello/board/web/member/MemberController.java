@@ -1,6 +1,6 @@
 package hello.board.web.member;
 
-import hello.board.repository.member.Member;
+import hello.board.domain.Member;
 import hello.board.repository.member.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;

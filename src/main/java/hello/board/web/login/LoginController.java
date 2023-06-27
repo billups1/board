@@ -1,9 +1,8 @@
 package hello.board.web.login;
 
-import hello.board.domain.login.LoginService;
-import hello.board.repository.member.Member;
+import hello.board.service.LoginService;
+import hello.board.domain.Member;
 import hello.board.web.SessionConst;
-import hello.board.web.session.SessionManager;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;

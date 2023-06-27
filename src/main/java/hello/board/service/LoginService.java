@@ -1,12 +1,13 @@
-package hello.board.domain.login;
+package hello.board.service;
 
-import hello.board.repository.member.Member;
+import hello.board.domain.Member;
 import hello.board.repository.member.MemberRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @RequiredArgsConstructor
+@Transactional
 @Service
 public class LoginService {
 

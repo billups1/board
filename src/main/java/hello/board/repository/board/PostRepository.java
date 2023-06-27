@@ -1,5 +1,7 @@
 package hello.board.repository.board;
 
+import hello.board.domain.Post;
+
 import java.util.List;
 import java.util.Optional;
 

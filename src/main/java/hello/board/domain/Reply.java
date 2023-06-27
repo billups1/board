@@ -1,11 +1,8 @@
-package hello.board.repository.reply;
+package hello.board.domain;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 
 @Entity
@@ -16,8 +13,9 @@ public class Reply {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long rno;
     private long bno;
-    @NotBlank
-    private String username;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "member_id")
+    private Member member;
     @NotBlank
     private String content;
     @NotBlank

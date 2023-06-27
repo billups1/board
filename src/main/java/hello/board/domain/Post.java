@@ -1,11 +1,8 @@
-package hello.board.repository.board;
+package hello.board.domain;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
@@ -15,8 +12,11 @@ public class Post {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long bno;
-    @NotBlank
-    private String username;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "member_id")
+    private Member member;
+
     @NotBlank
     private String title;
     @NotBlank
@@ -33,8 +33,8 @@ public class Post {
         this.content = content;
     }
 
-    public Post(String username, String title, String content, String date, String whetherLogin) {
-        this.username = username;
+    public Post(Member member, String title, String content, String date, String whetherLogin) {
+        this.member = member;
         this.title = title;
         this.content = content;
         this.date = date;
