@@ -28,6 +28,12 @@
     <input type="text" id="content2" name="content2" class="form-control" th:value="${post.content}"
            style="width:300px;height:300px;" readonly>
 </div>
+<div>
+    <a th:if="${post.attachFile}" th:href="|/attach/${post.bno}|" th:text="${post.getAttachFile().getUploadFileName()}"/>
+</div>
+<div>
+    <img th:each="imageFile : ${post.imageFiles}" th:src="|/images/${imageFile.getStoreFileName()}|" width="300" height="300"/>
+</div>
 <div class="col">
     <a th:href="@{|/post/edit/${post.bno}|}">수정하기</a>
 

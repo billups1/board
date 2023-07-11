@@ -10,6 +10,4 @@ public interface ReplyRepository {
 
     void update(Long rno, ReplyUpdateDto updateParam);
 
-    List<Reply> findByBno(long bno);
-
 }

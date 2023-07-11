@@ -25,9 +25,4 @@ public class JpaReplyRepository implements ReplyRepository{
 //        reply.setContent(updateParam.getContent());
     }
 
-    @Override
-    public List<Reply> findByBno(long bno) {
-        List<Reply> replies = repository.findByBno(bno);
-        return replies;
-    }
 }

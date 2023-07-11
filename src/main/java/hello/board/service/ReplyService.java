@@ -1,8 +1,6 @@
 package hello.board.service;
 
-import hello.board.domain.Post;
 import hello.board.domain.Reply;
-import hello.board.repository.board.PostUpdateDto;
 import hello.board.repository.reply.ReplyRepository;
 import hello.board.repository.reply.ReplyUpdateDto;
 import lombok.RequiredArgsConstructor;
@@ -24,10 +22,6 @@ public class ReplyService {
 
     public void updateReply(Long rno, ReplyUpdateDto updateParam) {
         replyRepository.update(rno, updateParam);
-    }
-
-    public List<Reply> findReplyByBno(Long bno) {
-        return replyRepository.findByBno(bno);
     }
 
 }

@@ -1,9 +1,9 @@
 package hello.board.repository.board;
 
 import hello.board.domain.Post;
+import hello.board.web.post.PostUpdateDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;

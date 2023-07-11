@@ -1,4 +1,4 @@
-package hello.board.repository.board;
+package hello.board.web.post;
 
 import lombok.Getter;
 
