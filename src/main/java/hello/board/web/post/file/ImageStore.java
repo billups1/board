@@ -18,7 +18,6 @@ import java.util.UUID;
 @Component
 @Slf4j
 public class ImageStore {
-
     @Value("${file.dir}")
     private String fileDir;
 

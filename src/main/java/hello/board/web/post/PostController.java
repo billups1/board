@@ -92,7 +92,6 @@ public class PostController {
 
     @GetMapping("/attach/{postId}")
     public ResponseEntity<Resource> downloadAttach(@PathVariable Long postId) throws MalformedURLException {
-        log.info("aaa");
         Post post = postService.findOne(postId);
         String storeFileName = post.getAttachFile().getStoreFileName();
         String uploadFileName = post.getAttachFile().getUploadFileName();
